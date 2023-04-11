@@ -1,0 +1,33 @@
+<% layout('layout/main') -%> <% block('title', 'Home') -%>
+
+<div class="container mt-4 text-center down">
+  <h1 class="blog-heading">Welcome to BlogSum</h1>
+  <h4 class="blog-sub-heading text-muted">
+    Click on Compose to create your new BLog
+  </h4>
+</div>
+<br />
+<br />
+
+<div class="container home__container-post">
+  <h1 class="text-center">Most Recent Blogs</h1>
+  <div class="row mr-5">
+    <% posts.forEach(function(post){ %>
+
+    <div class="card col-3 offset-1 mt-5">
+      <div class="card-body home__card">
+        <h5 class="card-title"><%=post.title%></h5>
+        <p class="card-text"><%=post.content%></p>
+        <a href="/posts/<%=post._id%>" class="btn btn-primary home__post-btn"
+          >Read more</a
+        >
+        <a href="/delete/<%=post._id%>" class="btn btn-danger"
+          >Delete</a
+        >
+      
+
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

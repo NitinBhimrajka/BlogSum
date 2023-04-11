@@ -1,0 +1,27 @@
+<% layout('layout/main') -%>
+<% block('title', 'Contact') -%>
+
+
+    <div class="container compose__container">
+      <h1 class="blog-heading ">ContactUS</h1>
+      <form action="mailto:nitina664@gamil.com" method="get" enctype="text/plain">
+        <div class="form-group">
+          <label>Name</label>
+          <input class="form-control" type="text" name="ContactName">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input class="form-control" type="text" name="ContactEmail">
+        </div>
+        <div class="form-group">
+          <label>Comment</label>
+          <textarea class="form-control" name="ContactComment" rows="3" cols="30"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Submit</button>
+      </form>
+    </div>
+
+
+ 
+    
+    
